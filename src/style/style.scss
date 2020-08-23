@@ -1,0 +1,55 @@
+@import "./general.scss";
+
+
+header{
+    width: 100%;
+    img{
+        width: 100%;
+    }
+    nav{
+        text-align: center;
+        font-family: $header_font;
+        font-size: 2.5vw;
+        .navbar-nav a{
+            padding:  0 50px!important;
+        }
+    }
+    .nav-link{
+        color:black!important;
+    }
+    .nav-pills .active {
+        border-bottom: 1.5px black solid;
+        border-radius: 0!important;
+        background-color: transparent!important;
+    }
+    nav .show, nav .collapsing, nav button{
+        background-color: white!important;
+    }
+}
+.div_intro{
+    font-family: "Lato Regular";
+    
+    h3{
+        text-align: center;
+        font-family: "Quicksand_Light";
+        font-size: 3vw;
+        padding: 1em 0 5px 0;
+        margin: 0 35px;
+        border-bottom: black solid 1px;
+    }
+    h6{
+        text-align: center;
+        padding: 5px;
+        font-size: 1.8vw;
+    }
+    p{
+        font-size: 1.3vw;
+        padding: 10px;
+        .bold{
+            font-weight: bold;
+        }
+    }
+    
+}
+
+

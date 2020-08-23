@@ -1,0 +1,4 @@
+rouge:
+	bordeaux clair: #800020
+	bordeaux : #6D071A
+	rouge de base : #C7152C

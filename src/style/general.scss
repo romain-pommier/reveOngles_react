@@ -1,0 +1,36 @@
+@font-face {
+    font-family: "Shining Times";
+    src: local("Shining Times"), local("ShiningTimes"),
+        url("../fonts/Shining\ Times.ttf")
+    ;
+}
+@font-face {
+    font-family: "Quicksand_Light";
+    src: local("Quicksand Light"), local("QuicksandLight"),
+        url("../fonts/Quicksand\ Light.otf")
+    ;
+}
+@font-face {
+    font-family: "Lato Regular";
+    src: local("Lato-Regular"),
+        url("../fonts/Lato-Regular.ttf")
+    ;
+}
+
+$image_header: "../logo.svg";
+$color: pink;
+$header_font: "Shining Times";
+
+body{
+    max-width: 100% !important;
+    width: 100%;
+    margin:0 !important;
+    padding:0 !important;
+}
+.col{
+    padding: 0!important;
+}
+.row{
+    margin:0!important;
+}
+   
