@@ -5,6 +5,7 @@ import Header from "./Components/Header"
 import IntroDiv from "./Components/IntroDiv"
 import './style/style.scss'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 class App extends Component {
   // constructor(props) {
@@ -13,10 +14,12 @@ class App extends Component {
   // }
   render() {
     return (
+      // <ParallaxProvider>
       <div>
         <Header />
         <IntroDiv />
       </div>
+      // </ParallaxProvider>
 
       // <PocReact />
 

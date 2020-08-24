@@ -9,9 +9,9 @@ class IntroDiv extends Component {
 
 
             <Row className="div_intro">
-                <Col><Image src={LeftPicture} fluid ></Image></Col>
+                <Col className=" d-none d-lg-block  "><Image src={LeftPicture} fluid ></Image></Col>
                 <Col><h3>Anne</h3><div><h6>Styliste ongulaire à Toulouse</h6> <p className="text-center">Moi c'es Anne votre <span className="bold">prothésiste ongulaire à Labarthe-sur-lèze</span> jeune entrepreneuse. Je vous propose des prestations de qualité pour la beauté de vos mains et pieds. Technique russe manucure et vernis permanent renfort sous cuticiules, gel, vernis semi-permanent, remplissage, décoration d'ongles fait à la main</p></div></Col>
-                <Col><Image src={RightPicture} fluid></Image></Col>
+                <Col className="d-none d-sm-block " ><Image src={RightPicture} fluid></Image></Col>
             </Row>
 
 

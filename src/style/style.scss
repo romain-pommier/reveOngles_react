@@ -1,15 +1,58 @@
 @import "./general.scss";
 
 
+@media screen and (max-width: 64em) {
+    h1 {
+        font-size: 2.5em;
+      }
+    }
+    
+    @media screen and (max-width: 50em) {
+    h1 {
+        font-size: 2em;
+      }
+    }
+    
+    @media screen and (max-width: 30em){
+    h1 {
+        font-size: 1.5em;
+      }
+    }
+
 header{
     width: 100%;
-    img{
+    height: 900px;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    background-color: black;
+    
+    .background_header{
         width: 100%;
+        min-width: 2000px;
+        min-height: 1500px;
+        
     }
+    
+    .logo_header{
+        position: absolute;
+        // margin-left: 50%;
+        transform: translateX(-50%);
+        top:30%;
+        z-index: 1;
+        max-width: 45vw;
+        min-width: 500px;
+    }
+    // .logo_header:hover{
+    //     filter: invert(1);
+    // }
     nav{
-        text-align: center;
+        z-index: 2;
+        width: 100%;
+        position: absolute!important;
+        top:5%;
         font-family: $header_font;
-        font-size: 2.5vw;
+        font-size: 50px;
         .navbar-nav a{
             padding:  0 50px!important;
         }
@@ -17,22 +60,32 @@ header{
     .nav-link{
         color:black!important;
     }
+    .nav-link:hover{
+        filter: invert(1);
+    }
     .nav-pills .active {
         border-bottom: 1.5px black solid;
         border-radius: 0!important;
         background-color: transparent!important;
     }
     nav .show, nav .collapsing, nav button{
-        background-color: white!important;
+        margin-top: 10px;
+        background-color: rgba(white, 0.8)!important;
+        border-radius: 5%;
     }
 }
+
+
+
+
 .div_intro{
     font-family: "Lato Regular";
+    
     
     h3{
         text-align: center;
         font-family: "Quicksand_Light";
-        font-size: 3vw;
+        font-size: 45px;
         padding: 1em 0 5px 0;
         margin: 0 35px;
         border-bottom: black solid 1px;
@@ -40,16 +93,23 @@ header{
     h6{
         text-align: center;
         padding: 5px;
-        font-size: 1.8vw;
+        font-size: 100%;
     }
     p{
-        font-size: 1.3vw;
+        font-size: 100%;
         padding: 10px;
         .bold{
             font-weight: bold;
         }
     }
+    /*medium media*/
+@media (min-width: 768px) and (max-width: 991.98px) { 
+   
     
 }
+    
+}
+
+
 
 
