@@ -1,51 +1,30 @@
 @import "./general.scss";
 
 
-@media screen and (max-width: 64em) {
-    h1 {
-        font-size: 2.5em;
-      }
-    }
-    
-    @media screen and (max-width: 50em) {
-    h1 {
-        font-size: 2em;
-      }
-    }
-    
-    @media screen and (max-width: 30em){
-    h1 {
-        font-size: 1.5em;
-      }
-    }
-
 header{
     width: 100%;
     height: 900px;
     position: relative;
     text-align: center;
     overflow: hidden;
+    background-image: url(../image/header_background.jpg);
+    background-size: cover;
+    background-attachment: fixed;;
     background-color: black;
-    
     .background_header{
         width: 100%;
         min-width: 2000px;
         min-height: 1500px;
         
     }
-    
     .logo_header{
         position: absolute;
-        // margin-left: 50%;
         transform: translateX(-50%);
         top:30%;
         z-index: 1;
         max-width: 45vw;
-        min-width: 500px;
+        min-width: 330px;
     }
-    // .logo_header:hover{
-    //     filter: invert(1);
-    // }
     nav{
         z-index: 2;
         width: 100%;
@@ -77,6 +56,7 @@ header{
 
 
 
+/*div intro*/
 
 .div_intro{
     font-family: "Lato Regular";
@@ -101,13 +81,59 @@ header{
         .bold{
             font-weight: bold;
         }
+    }  
+}
+
+
+/*Description Entreprise*/
+.description_div{
+    width: 100%;
+    background-image: url("../image/body_background_tools.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    .description_logo{
+        max-width: 45vw;
+        min-width: 330px;
     }
-    /*medium media*/
-@media (min-width: 768px) and (max-width: 991.98px) { 
-   
+    .description_text{
+        padding: 3rem 25%;
+        font-size: 18px;
+        @media (max-width: 720px)  { 
+            padding: 3rem 5%;
+        }
+    }
+    .description_header{ 
+        text-align: center;
+        font-family: "Quicksand_Light";
+        font-size: 35px;
+    }
+
     
 }
+
+.perfect_flag{
+    // height: 300px;
+    background-color:$rouge;
+    color:white;
+    font-family:  "Lato Regular";
     
+    
+}
+
+
+
+
+/*medium media*/
+@media (min-width: 1500px)  { 
+    .perfect_flag{
+        .perfect_para{
+            padding: 3rem 15% 3rem 10%!important;
+        }
+        .perfect_header{
+            padding: 3rem 10% 3rem 15%!important;
+        }  
+    }
 }
 
 

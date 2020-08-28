@@ -10,12 +10,9 @@ class Header extends Component {
 
             <ParallaxProvider>
                 <header >
-
-                    <Parallax className="custom-class" y={[-60, 20]} tagOuter="figure">
-                        <Image className="background_header" src={imageBackground} ></Image>
-                    </Parallax>
-
-
+                    {/* <Parallax className="custom-class" y={[-60, 20]} tagOuter="figure">
+                        {/* <Image className="background_header" src={imageBackground} ></Image> */}
+                    {/* </Parallax> */}
                     <Navbar bg="transparent " expand="lg">
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse className="justify-content-center" id="basic-navbar-nav">
@@ -24,20 +21,12 @@ class Header extends Component {
                                 <Nav.Link href="#prestations">Prestations</Nav.Link>
                                 <Nav.Link href="#tarifs">Taris</Nav.Link>
                                 <Nav.Link href="#realisations">Réalisation</Nav.Link>
-
                             </Nav>
                         </Navbar.Collapse>
                     </Navbar>
-
-
-
                     <Image className="logo_header" src={LogoReveongles} fluid></Image>
-
-
-
                 </header >
             </ParallaxProvider>
-
         )
     }
 }
