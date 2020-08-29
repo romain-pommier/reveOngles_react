@@ -33,9 +33,9 @@ class DescriptionEntreprise extends Component {
                 </div >
                 <div className="w-100 mb-5 py-5">
                     <Row className="justify-content-center">
-                        <Col className="text-center"><div className="text-center"><Image src={LogoBush} fluid ></Image></div><h7>Préstastions</h7></Col>
-                        <Col className="text-center"><div className="text-center"><Image src={LogoStar} fluid ></Image></div><h7 className="text-center">Tarifs</h7></Col>
-                        <Col className="text-center"><div className="text-center"><Image src={LogoPhone} fluid ></Image></div><h7>Contact</h7></Col>
+                        <Col className="text-center"><div className="text-center"><Image src={LogoBush} fluid ></Image></div><h6>Préstastions</h6></Col>
+                        <Col className="text-center"><div className="text-center"><Image src={LogoStar} fluid ></Image></div><h6 className="text-center">Tarifs</h6></Col>
+                        <Col className="text-center"><div className="text-center"><Image src={LogoPhone} fluid ></Image></div><h6>Contact</h6></Col>
                     </Row>
                 </div>
             </Row>

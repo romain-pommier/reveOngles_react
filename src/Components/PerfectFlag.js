@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Image, Row, Col } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap'
 
 class PerfectFlag extends Component {
     render() {
