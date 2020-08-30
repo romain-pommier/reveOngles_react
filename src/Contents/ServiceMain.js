@@ -1,29 +1,60 @@
-import React from "react";
+import React, { Component } from "react";
 import { Row, Col } from 'react-bootstrap'
-const ServiceMain = () => {
-    return (
-        <div>
-            <ul>
-                <h6 className="header_in_tarifs m-5 text-center">Gel</h6>
-                <li><Row><Col className="col-4"><h6>Extension gel french (rallongement chablon)</h6></Col><Col className="decoration_underline "></Col><Col className="col-2"><p>59 €</p></Col></Row></li>
-                <li><Row><Col className="col-4"><h6>Extension gel couleur</h6></Col><Col className="decoration_underline "></Col><Col className="col-2"><p>61 €</p></Col></Row></li>
-                <li><Row><Col className="col-4"><h6>Renforcement gel transparent</h6></Col><Col className="decoration_underline "></Col><Col className="col-2"><p>40 €</p></Col></Row></li>
-                <li><Row><Col className="col-4"><h6>Renforcement gel /gum french</h6></Col><Col className="decoration_underline "></Col><Col className="col-2"><p>49 €</p></Col></Row></li>
-                <li><Row><Col className="col-4"><h6>Renforcement gel /gum couleur</h6></Col><Col className="decoration_underline "></Col><Col className="col-2"><p>51 €</p></Col></Row></li>
-                <li><Row><Col className="col-4"><h6>Remplissage gel/gum french</h6></Col><Col className="decoration_underline "></Col><Col className="col-2"><p>49 €</p></Col></Row></li>
-                <li><Row><Col className="col-4"><h6>Remplissage gel/gum couleur</h6></Col><Col className="decoration_underline "></Col><Col className="col-2"><p>51 €</p></Col></Row></li>
-                <li><Row><Col className="col-4"><h6>Pose artistique</h6></Col><Col className="decoration_underline "></Col><Col className="col-2"><p>Sur devis</p></Col></Row></li>
-                <li><Row><Col className="col-4"><h6>Ongle cassé (hors remplissage)</h6></Col><Col className="decoration_underline "></Col><Col className="col-2"><p>5 €</p></Col></Row></li>
-                <li><Row><Col className="col-4"><h6>Lors du remplissage</h6></Col><Col className="decoration_underline "></Col><Col className="col-2"><p>3,50 €</p></Col></Row></li>
-                <li><Row><Col className="col-4"><h6>Décoration (strass, stickers, dessin fait main 3D) sur devis à partir de</h6></Col><Col className="decoration_underline "></Col><Col className="col-2"><p>0,50 €</p></Col></Row></li>
-                <li><Row><Col className="col-4"><h6>Dépose</h6></Col><Col className="decoration_underline "></Col><Col className="col-2"><p>20 €</p></Col></Row></li>
-                <h6 className="header_in_tarifs m-5 text-center">Vernis permanent</h6>
-                <li><Row><Col className="col-4"><h6>Vernis permanent</h6></Col><Col className="decoration_underline "></Col><Col className="col-2"><p>40 €</p></Col></Row></li>
-                <li><Row><Col className="col-4"><h6>Vernis permanent Renfort Russe</h6></Col><Col className="decoration_underline "></Col><Col className="col-2"><p>40 €</p></Col></Row></li>
+class ServiceMain extends Component {
+    dataGel = [
+        { id: 1, serviceName: "Extension gel french (rallongement chablon)", price: "59 €" },
+        { id: 2, serviceName: "Extension gel couleur", price: "61 €" },
+        { id: 3, serviceName: "Renforcement gel transparent", price: "40 €" },
+        { id: 4, serviceName: "Renforcement gel /gum french", price: "49 €" },
+        { id: 5, serviceName: "Renforcement gel /gum couleur", price: "51 €" },
+        { id: 6, serviceName: "Remplissage gel/gum french", price: "49 €" },
+        { id: 7, serviceName: "Remplissage gel/gum couleur", price: "51" },
+        { id: 8, serviceName: "Pose artistique", price: "Sur devis" },
+        { id: 9, serviceName: "Ongle cassé (hors remplissage)", price: "5 €" },
+        { id: 10, serviceName: "Lors du remplissage", price: "3,50 €" },
+        { id: 11, serviceName: "Décoration", price: "0,50 €" },
+        { id: 12, serviceName: "Dépose", price: "20 €" },
 
-            </ul>
-        </div >
-    );
-};
+    ]
+    dataVernis = [
+        { id: 1, serviceName: "Vernis permanent", price: "29 €" },
+        { id: 2, serviceName: "Vernis permanent Renfort Russe", price: "39 €" }
+
+    ]
+
+    render() {
+        return (
+            <ul className="m-5">
+                <React.Fragment>
+                    <h6 className="header_in_tarifs m-5 text-center">Gel</h6>
+                    {this.dataGel.map((elem, index) => {
+                        return (
+
+                            <React.Fragment key={index}>
+                                <li key={elem.id} ><Row><Col className="col-2"><h6>{elem.serviceName}</h6></Col><Col className="decoration_underline "></Col><Col className="col-2"><p>{elem.price}</p></Col></Row></li>
+                            </React.Fragment>
+
+                        )
+                    })}
+                </React.Fragment>
+                <React.Fragment>
+                    <h6 className="header_in_tarifs m-5 text-center">Vernis permanent</h6>
+                    {this.dataVernis.map((elem, index) => {
+                        return (
+
+                            <React.Fragment key={index}>
+                                <li key={elem.id}  ><Row><Col className="col-2"><h6>{elem.serviceName}</h6></Col><Col className="decoration_underline "></Col><Col className="col-2"><p>{elem.price}</p></Col></Row></li>
+                            </React.Fragment>
+
+                        )
+                    })}
+                </React.Fragment>
+            </ul >
+
+        );
+    }
+
+}
+
 
 export default ServiceMain;

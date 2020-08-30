@@ -1,17 +1,30 @@
-import React from "react";
+import React, { Component } from "react";
 import { Row, Col } from 'react-bootstrap'
-const ServiceBeaute = () => {
-    return (
-        <div>
-            <ul className="m-5">
-                <li><Row><Col className="col-2"><h6>Manucure combiné russe seul</h6></Col><Col className="decoration_underline "></Col><Col className="col-2"><p>25 €</p></Col></Row></li>
-                <li><Row><Col className="col-2"><h6>Avec Pose</h6></Col><Col className="decoration_underline "></Col><Col className="col-2"><p>15 €</p></Col></Row></li>
-                <li><Row><Col className="col-2"><h6>Manucure rapide</h6></Col><Col className="decoration_underline "></Col><Col className="col-2"><p>10 €</p></Col></Row></li>
-                <li><Row><Col className="col-2"><h6>Soin à la paraffine</h6></Col><Col className="decoration_underline "></Col><Col className="col-2"><p>20 €</p></Col></Row></li>
+class ServiceBeaute extends Component {
+    data = [
+        { id: 1, serviceName: "Manucure combiné russe seul", price: "25 €" },
+        { id: 2, serviceName: "Avec Pose", price: "15 €" },
+        { id: 3, serviceName: "Manucure rapide", price: "10 €" },
+        { id: 4, serviceName: "Soin à la paraffine", price: "20 €" },
 
-            </ul>
-        </div >
-    );
+    ]
+    render() {
+        return (
+            <ul className="m-5">
+                <React.Fragment>
+                    {this.data.map((elem, index) => {
+                        return (
+
+                            <React.Fragment key={index}>
+                                <li key={elem.id} ><Row><Col className="col-2"><h6>{elem.serviceName}</h6></Col><Col className="decoration_underline "></Col><Col className="col-2"><p>{elem.price}</p></Col></Row></li>
+                            </React.Fragment>
+
+                        )
+                    })}
+                </React.Fragment>
+            </ul >
+        )
+    }
 };
 
 export default ServiceBeaute;

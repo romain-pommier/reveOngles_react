@@ -10,11 +10,19 @@ class Accordion extends Component {
     }
     handleClick = (currentAccordion) => {
         const newAccordions = this.state.accordions;
+
         newAccordions.forEach((accordion) => {
-            if (currentAccordion.id === accordion.id) {
+
+            if (currentAccordion.id === accordion.id && currentAccordion.state === "active") {
+                accordion.state = "inactive";
+                this.setPanelHeight(`.panel-${accordion.id}`, true);
+            }
+            else if (currentAccordion.id === accordion.id) {
                 accordion.state = "active";
+
                 this.setPanelHeight(`.panel-${accordion.id}`, false);
-            } else {
+            }
+            else {
                 accordion.state = "inactive";
                 this.setPanelHeight(`.panel-${accordion.id}`, true);
             }
@@ -31,19 +39,20 @@ class Accordion extends Component {
             <React.Fragment>
                 {accordions.map((accordion, index) => {
                     return (
-                        <div className="container">
+                        <div className="container" key={index}>
                             <React.Fragment key={index}>
                                 <button className={`accordion ${accordion.state}`} onClick={() => this.handleClick(accordion)} >
                                     {accordion.name}
                                 </button>
-                                <div className={`panel panel-${accordion.id} `}>
+                                <div className={`panel panel-${accordion.id} `} key={this.state.id}>
                                     {accordion.content()}
                                 </div>
                             </React.Fragment>
                         </div>
                     );
-                })}
-            </React.Fragment>
+                })
+                }
+            </React.Fragment >
         );
     }
 }
