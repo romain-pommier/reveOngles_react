@@ -14,7 +14,7 @@ class Tarifs extends Component {
     render() {
         return (
 
-            <div className="accordion_div" >
+            <div id="tarifs" className="accordion_div" >
                 <h3 className="m-5 text-center">Tarifs</h3>
                 <Accordion data={this.data} >
 

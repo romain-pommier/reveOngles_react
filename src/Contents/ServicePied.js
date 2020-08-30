@@ -17,7 +17,7 @@ class ServicePied extends Component {
                     {this.data.map((elem, index) => {
                         return (
                             <React.Fragment key={index}>
-                                <li key={elem.id}  ><Row><Col className="col-2"><h6>{elem.serviceName}</h6></Col><Col className="decoration_underline "></Col><Col className="col-2"><p>{elem.price}</p></Col></Row></li>
+                                <li key={elem.id}  ><Row><Col className="col-3"><h6>{elem.serviceName}</h6></Col><Col className="decoration_underline "></Col><Col className="col-2"><p>{elem.price}</p></Col></Row></li>
                             </React.Fragment>
                         )
                     })}

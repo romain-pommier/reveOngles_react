@@ -7,6 +7,7 @@ import DescriptionEntreprise from "./Components/DescriptionEntreprise"
 import PerfectFlag from "./Components/PerfectFlag"
 import Tarifs from "./Components/Tarifs"
 import CarouselMain from "./Components/CarouselMain"
+import Footer from "./Components/Footer"
 import './style/style.scss'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style/accordion.scss';
@@ -19,17 +20,15 @@ class App extends Component {
   render() {
     return (
       // <ParallaxProvider>
-      <div>
+      <>
         <Header />
         <IntroDiv />
         <DescriptionEntreprise />
         <PerfectFlag />
         <Tarifs />
         <CarouselMain />
-      </div>
-      // </ParallaxProvider>
-
-      // <PocReact />
+        <Footer />
+      </>
 
 
     )

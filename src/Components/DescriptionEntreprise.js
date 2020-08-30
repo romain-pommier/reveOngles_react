@@ -9,7 +9,7 @@ import LogoPhone from "../image/phone_icon.png"
 class DescriptionEntreprise extends Component {
     render() {
         return (
-            <Row className="description_div">
+            <Row id="prestations" className="description_div">
                 <div >
                     <Col className="mt-5 pt-5" >
                         <div className=" d-flex justify-content-center">

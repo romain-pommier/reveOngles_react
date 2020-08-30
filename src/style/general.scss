@@ -40,7 +40,9 @@ $header_font: "Shining Times";
 $bordeaux_clair: #800020;
 $bordeaux : #6D071A;
 $rouge: #C7152C;
-
+html{
+    scroll-behavior: smooth;
+}
 body{
     max-width: 100% !important;
     width: 100%;
