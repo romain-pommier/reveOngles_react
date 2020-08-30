@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "../style/accordion.scss";
 
 class Accordion extends Component {
     constructor(props) {
@@ -32,7 +31,7 @@ class Accordion extends Component {
             <React.Fragment>
                 {accordions.map((accordion, index) => {
                     return (
-                        <div className="accordion_div">
+                        <div className="container">
                             <React.Fragment key={index}>
                                 <button className={`accordion ${accordion.state}`} onClick={() => this.handleClick(accordion)} >
                                     {accordion.name}

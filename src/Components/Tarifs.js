@@ -1,18 +1,26 @@
 import React, { Component } from 'react';
 import Accordion from './Accordion'
-import Services from './Services'
+import ServiceMain from '../Contents/ServiceMain'
+import ServicePied from '../Contents/ServicePied'
+import ServiceBeaute from '../Contents/ServiceBeaute'
+
 
 class Tarifs extends Component {
     data = [
-        { id: 1, name: "About Us", content: () => <Services />, state: "active" },
-        { id: 2, name: "Service", content: () => <Services />, state: "inactive" },
-        { id: 3, name: "Contact Us", content: () => <Services />, state: "inactive", },
+        { id: 1, name: "Tarifs Mains", content: () => <ServiceMain />, state: "active" },
+        { id: 2, name: "Tarifs Pieds", content: () => <ServicePied />, state: "inactive" },
+        { id: 3, name: "Beauté Main & Pieds", content: () => <ServiceBeaute />, state: "inactive", },
     ]
     render() {
         return (
-            <Accordion data={this.data} >
 
-            </Accordion>
+            <div className="accordion_div" >
+                <h3 className="m-5 text-center">Tarifs</h3>
+                <Accordion data={this.data} >
+
+                </Accordion>
+
+            </div>
 
         )
     }

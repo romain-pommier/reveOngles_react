@@ -1,62 +1,79 @@
-.accordion {
+.accordion_div{
+  h3{
+    font-family: "Lato Light";
+    font-size:40px
+  }
+  .accordion {
     background-color: white;
     color: #444;
     cursor: pointer;
     padding: 18px;
     width: 100%;
-    border: none;
+    border:none;
+    border-bottom: 1px solid black;
     text-align: left;
     outline: none;
-    font-size: 15px;
-    transition: 0.4s;
-    
+    font-size: 20px;
+    transition: 0.4s;  
+    font-family:  "Lato Regular"!important; 
     
   }
   
-  
-  .active,
   .accordion:hover {
     background-color: #eee;
-    font-size: 20px;
+    font-size: 25px;
   }
-  
   
   .accordion:after {
     content: "\002B";
-    color: #777;
+    color: black;
     // font-weight: bold;
     float: right;
     margin-left: 5px;
-    font-size: 20px;
+    font-size: 30px;
   }
   
   .active:after {
     content: "\2212";
+    font-size:30px;
+    border: none;
   }
-  .accordion_div{
-    background-color: blueviolet;
+
+  button:focus{
+    outline: none!important;
   }
-  
+ 
   .panel {
     padding: 0 18px;
     background-color: white;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
+    font-family:  "Lato Italic";
+    .header_in_tarifs{
+      font-size: 25px;
+      font-weight: normal;
+    }
     li{
       list-style: none;
       div{
-        display: flex!important;
+        .decoration_underline{
+          width: 100%;
+          border-bottom: dashed black 1px;
+          height: 25px;
+        }
+        p{
+          text-align: center;
+        }
         justify-content: space-between;
         flex-wrap: wrap;
-        h6:after{
-          content:"-";
-          width: 500px;
-          background-color: red!important;
-        }
-        p:before{
-          content: "-";
-        }
       }
+    }
   }
+  @media (max-width: 575.98px)  { 
+    .panel, .panel ul, .container{
+      padding:0!important
   }
+}
+
+}

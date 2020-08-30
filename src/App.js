@@ -8,6 +8,7 @@ import PerfectFlag from "./Components/PerfectFlag"
 import Tarifs from "./Components/Tarifs"
 import './style/style.scss'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './style/accordion.scss';
 
 class App extends Component {
   // constructor(props) {

@@ -14,8 +14,7 @@ header{
     .background_header{
         width: 100%;
         min-width: 2000px;
-        min-height: 1500px;
-        
+        min-height: 1500px;   
     }
     .logo_header{
         position: absolute;
@@ -23,7 +22,7 @@ header{
         top:30%;
         z-index: 1;
         max-width: 45vw;
-        min-width: 350px;
+        min-width: 380px;
     }
     nav{
         z-index: 2;
@@ -59,8 +58,6 @@ header{
 /*Div intro*/
 .div_intro{
     font-family: "Lato Regular";
-    
-    
     h3{
         text-align: center;
         font-family: "Quicksand_Light";
@@ -92,7 +89,7 @@ header{
     background-size: cover;
     background-attachment: fixed;
     .description_logo{
-        max-width: 45vw;
+        max-width: 40vw;
         min-width: 320px;
     }
     .description_text{
@@ -106,9 +103,7 @@ header{
         text-align: center;
         font-family: "Quicksand_Light";
         font-size: 35px;
-    }
-
-    
+    } 
 }
 /*Perfectionnez Vous div*/
 .perfect_flag{
@@ -118,6 +113,7 @@ header{
     font-family:  "Lato Regular"; 
 }
 
+
 /*Tarifs*/
 .accordion{
     color: black!important;
@@ -125,9 +121,6 @@ header{
         background-color: white!important;
     }
 }
-
-
-
 
 
 /*Media*/
