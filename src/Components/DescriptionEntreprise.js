@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import { Image, Row, Col } from 'react-bootstrap'
-import NailPolish from "../image/nail-polish.png"
+// import NailPolish from "../image/nail-polish.png"
+import NailPolish from "../image/nail-polish3.png"
 import LogoReveongles from "../image/logo_reve_ongles.png"
-import LogoBush from "../image/bush_icon.png"
-import LogoStar from "../image/star_icon4.png"
-import LogoPhone from "../image/phone_icon.png"
+// import LogoBush from "../image/bush_icon.png"
+// import LogoStar from "../image/star_icon4.png"
+// import LogoPhone from "../image/phone_icon.png"
+import LogoBush from "../image/bush_icon3.png"
+import LogoStar from "../image/star_icon3.png"
+import LogoPhone from "../image/phone_icon3.png"
 
 class DescriptionEntreprise extends Component {
     render() {
@@ -18,11 +22,12 @@ class DescriptionEntreprise extends Component {
                         <div className=" pt-5 d-flex justify-content-center">
                             <Image className=" description_logo" src={LogoReveongles} fluid></Image>
                         </div>
+                        <h2 className="description_header">Salon de manucure et centre de formation</h2>
                         <p className="pt-5 text-center description_text">
                             Je suis Anne votre prothésiste ongulaire et formatrice. <br />
                             Les ongles sont pour moi une vériatble passion depuis des années. <br />
                             Mes expériences: Diplôme CAP esthétique ainsi que 38 certificats d'ongles à mon actif, concours, formatrice en France, salon d'ongles en France avec la marque avec laquelle je travail.
-                    </p>
+                        </p>
                         <h2 className="description_header">Prothésiste ongulaire à Labarthe-sur-Lèze</h2>
                         <p className="pt-5 text-center description_text">
                             Je mets un point d'honneur à vous écouter, au moment de la prise de rendez-vous et tout au long de votre prestation.

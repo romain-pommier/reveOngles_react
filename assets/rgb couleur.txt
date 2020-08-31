@@ -1,4 +1,6 @@
 rouge:
 	bordeaux clair: #800020
 	bordeaux : #6D071A
+	idées bordeaux: #9e1638
 	rouge de base : #C7152C
+	idées etamin: #B0524B

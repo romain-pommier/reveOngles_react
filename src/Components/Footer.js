@@ -14,13 +14,13 @@ class Footer extends Component {
                 </div>
 
                 <div className="p-5 icon_footer_group">
-                    <a target="_blank" href="https://www.facebook.com/revedonglesanne31"><Image className="icon_footer" src={IconFacebook} ></Image></a>
-                    <a target="_blank" href="https://www.instagram.com/revedongles/"><Image className="icon_footer" src={IconInstagram} ></Image></a>
+                    <a href="https://www.facebook.com/revedonglesanne31"><Image className="icon_footer" src={IconFacebook} ></Image></a>
+                    <a href="https://www.instagram.com/revedongles/"><Image className="icon_footer" src={IconInstagram} ></Image></a>
                 </div>
 
                 <div className="p-2">
                     <h4>© 2020 Rêve d'ongles Anne POMMIER.</h4>
-                    <a className="top_arrow" href="#accueil"><i class="fa fa-angle-up"></i></a>
+                    <a className="top_arrow" href="#accueil"><i className="fa fa-angle-up"></i></a>
                 </div>
             </footer>
         )

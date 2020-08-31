@@ -13,7 +13,7 @@ class Header extends Component {
                     <Navbar.Collapse className="justify-content-center" id="basic-navbar-nav">
                         <Nav variant="pills">
                             <Nav.Link href="#prestations">Prestations</Nav.Link>
-                            <Nav.Link href="#tarifs">Tarifs</Nav.Link>
+                            <Nav.Link href="#tarifs">Tarifs & Formations</Nav.Link>
                             <Nav.Link href="#realisations">Réalisation</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
