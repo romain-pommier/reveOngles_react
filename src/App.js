@@ -1,4 +1,10 @@
 import React, { Component } from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 import './App.css';
 // import PocReact from './Components/PocReact'
 import Header from "./Components/Header"
@@ -7,8 +13,10 @@ import DescriptionEntreprise from "./Components/DescriptionEntreprise"
 import PerfectFlag from "./Components/PerfectFlag"
 import Tarifs from "./Components/Tarifs"
 import CarouselMain from "./Components/CarouselMain"
+import LoginPage from "./Components/LoginPage"
 import Footer from "./Components/Footer"
 import './style/style.scss'
+import "./style/login.scss"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style/accordion.scss';
 
@@ -18,18 +26,29 @@ class App extends Component {
 
   // }
   render() {
-    return (
-      // <ParallaxProvider>
-      <>
-        <Header />
-        <IntroDiv />
-        <DescriptionEntreprise />
-        <PerfectFlag />
-        <Tarifs />
-        <CarouselMain />
-        <Footer />
-      </>
+    return (<>
 
+      <Router>
+        <Switch>
+          <Route exact path="/admin">
+          </Route>
+          <Route exact path="/login">
+            <LoginPage />
+          </Route>
+          <Route exact path="/">
+            <Header />
+            <IntroDiv />
+            <DescriptionEntreprise />
+            <PerfectFlag />
+            <Tarifs />
+            <CarouselMain />
+            <Footer />
+          </Route>
+
+
+        </Switch>
+      </Router>
+    </>
 
     )
 
