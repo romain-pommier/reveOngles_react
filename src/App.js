@@ -3,58 +3,65 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
-} from "react-router-dom";
+  Redirect,
+  Link,
+} from 'react-router-dom';
 import './App.css';
 // import PocReact from './Components/PocReact'
-import Header from "./Components/Header"
-import IntroDiv from "./Components/IntroDiv"
-import DescriptionEntreprise from "./Components/DescriptionEntreprise"
-import PerfectFlag from "./Components/PerfectFlag"
-import Tarifs from "./Components/Tarifs"
-import CarouselMain from "./Components/CarouselMain"
-import LoginPage from "./Components/LoginPage"
-import Footer from "./Components/Footer"
-import './style/style.scss'
-import "./style/login.scss"
+import Header from './Components/Header';
+import IntroDiv from './Components/IntroDiv';
+import DescriptionEntreprise from './Components/DescriptionEntreprise';
+import PerfectFlag from './Components/PerfectFlag';
+import Tarifs from './Components/Tarifs';
+import CarouselMain from './Components/CarouselMain';
+import LoginPage from './Components/LoginPage';
+import Footer from './Components/Footer';
+import './style/style.scss';
+import './style/login.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style/accordion.scss';
 
 class App extends Component {
-  // constructor(props) {
-  //   super(props)
-
-  // }
+  constructor(props) {
+    super(props);
+    this.state = {
+      isUserAuthenticated: false,
+    };
+  }
   render() {
-    return (<>
+    return (
+      <>
+        <Router>
+          <Switch>
+            <Route exact path="/admin"></Route>
+            <Route
+              exact
+              path="/login"
+              render={() => {
+                return this.state.isUserAuthenticated ? (
+                  <Redirect to="/" />
+                ) : (
+                  <Redirect to="/admin" />
+                );
+              }}
+            >
+              <LoginPage />
+            </Route>
 
-      <Router>
-        <Switch>
-          <Route exact path="/admin">
-          </Route>
-          <Route exact path="/login">
-            <LoginPage />
-          </Route>
-          <Route exact path="/">
-            <Header />
-            <IntroDiv />
-            <DescriptionEntreprise />
-            <PerfectFlag />
-            <Tarifs />
-            <CarouselMain />
-            <Footer />
-          </Route>
-
-
-        </Switch>
-      </Router>
-    </>
-
-    )
-
-
+            <Route exact path="/">
+              <Header />
+              <IntroDiv />
+              <DescriptionEntreprise />
+              <PerfectFlag />
+              <Tarifs />
+              <CarouselMain />
+              <Footer />
+            </Route>
+          </Switch>
+        </Router>
+      </>
+    );
   }
 }
-
 
 export default App;

@@ -17,7 +17,7 @@ class Tarifs extends Component {
         return (
 
             <div id="tarifs" className="accordion_div" >
-                <h3 className="m-5 text-center">Tarifs</h3>
+                <h3 className="m-5 text-center">Tarifs bar a ongles</h3>
                 <Accordion data={this.data} >
 
                 </Accordion>
