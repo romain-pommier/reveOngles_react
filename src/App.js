@@ -27,6 +27,9 @@ class App extends Component {
 
     handleCallback = (tokenChild) => {
         this.setState({ token: tokenChild })
+        if (!tokenChild.error) {
+            this.setState({ isUserAuthenticated: true })
+        }
     }
 
     render() {
@@ -40,7 +43,7 @@ class App extends Component {
                             path="/admin"
                             render={() => {
                                 return this.state.isUserAuthenticated ? (
-                                    <Redirect to="/" />
+                                    <Redirect to="/admin" />
                                 ) : (
                                     <LoginPage tokenised={this.handleCallback} />
                                 )
