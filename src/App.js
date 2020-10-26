@@ -14,15 +14,21 @@ import './style/style.scss'
 import './style/login.scss'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './style/accordion.scss'
+import Auth from './Query/Authorized'
 
 class App extends Component {
     constructor(props) {
         super(props)
         this.state = {
             isUserAuthenticated: false,
-            token: false,
+            token: '',
         }
     }
+
+    handleCallback = (tokenChild) => {
+        this.setState({ token: tokenChild })
+    }
+
     render() {
         return (
             <>
@@ -33,15 +39,13 @@ class App extends Component {
                             exact
                             path="/admin"
                             render={() => {
-                                console.log(this.state.isUserAuthenticated)
                                 return this.state.isUserAuthenticated ? (
                                     <Redirect to="/" />
                                 ) : (
-                                    <LoginPage token={this.token} />
+                                    <LoginPage tokenised={this.handleCallback} />
                                 )
                             }}
                         ></Route>
-
                         <Route exact path="/">
                             <Header />
                             <IntroDiv />

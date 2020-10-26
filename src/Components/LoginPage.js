@@ -6,6 +6,7 @@ import { Image } from 'react-bootstrap'
 import Query from '../Query/Query'
 import Auth from '../Query/Authorized'
 import { useHistory } from 'react-router-dom'
+import App from '../App'
 
 class LoginPage extends Component {
     constructor(props) {
@@ -14,7 +15,6 @@ class LoginPage extends Component {
         this.state = {
             email: '',
             password: '',
-            token: this.props,
         }
     }
 
@@ -28,16 +28,18 @@ class LoginPage extends Component {
         })
     }
 
+    // Demande de token + modification du props token App.js
     handleSubmit = (event) => {
         let loginValue = { email: this.state.email, password: this.state.password }
         event.preventDefault()
         new Auth(loginValue).getToken().then((data) => {
-            this.setState({ token: data })
-            if (this.state.token.error) {
+            this.props.tokenised(data)
+            if (data.error) {
                 return
             }
         })
     }
+
     render() {
         return (
             <div className="Login container">
@@ -57,4 +59,5 @@ class LoginPage extends Component {
         )
     }
 }
+
 export default LoginPage
