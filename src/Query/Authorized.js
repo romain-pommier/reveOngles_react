@@ -1,4 +1,4 @@
-import React, { useState, Component } from 'react';
+import { Component } from 'react';
 
 const AUTHORIZEDURL = 'http://apianne.romain-pommier.com/api/auth/login';
 class Authorized extends Component {
