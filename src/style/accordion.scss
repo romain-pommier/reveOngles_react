@@ -1,8 +1,8 @@
-.accordion_div{
+.accordion_div {
   margin-top: 10%;
-  h3{
-    font-family: "Lato Light";
-    font-size:40px
+  h3 {
+    font-family: 'Lato Light';
+    font-size: 40px;
   }
   .accordion {
     background-color: white;
@@ -10,60 +10,59 @@
     cursor: pointer;
     padding: 18px;
     width: 100%;
-    border:none;
+    border: none;
     border-bottom: 1px solid black;
     text-align: left;
     outline: none;
     font-size: 20px;
-    transition: 0.4s;  
-    font-family:  "Lato Regular"!important; 
-    
+    transition: 0.4s;
+    font-family: 'Lato Regular' !important;
   }
-  
+
   .accordion:hover {
     background-color: #eee;
     font-size: 25px;
   }
-  
+
   .accordion:after {
-    content: "\002B";
+    content: '\002B';
     color: black;
     // font-weight: bold;
     float: right;
     margin-left: 5px;
     font-size: 30px;
   }
-  
+
   .active:after {
-    content: "\2212";
-    font-size:30px;
+    content: '\2212';
+    font-size: 30px;
     border: none;
   }
 
-  button:focus{
-    outline: none!important;
+  button:focus {
+    outline: none !important;
   }
- 
+
   .panel {
     padding: 0 18px;
     background-color: white;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
-    font-family:  "Lato Italic";
-    .header_in_tarifs{
+    font-family: 'Lato Italic';
+    .header_in_tarifs {
       font-size: 25px;
       font-weight: normal;
     }
-    li{
+    li {
       list-style: none;
-      div{
-        .decoration_underline{
+      div {
+        .decoration_underline {
           width: 100%;
           border-bottom: dashed black 1px;
           height: 25px;
         }
-        p{
+        p {
           text-align: center;
         }
         justify-content: space-between;
@@ -71,10 +70,14 @@
       }
     }
   }
-  @media (max-width: 575.98px)  { 
-    .panel, .panel ul, .container{
-      padding:0!important
+  @media (max-width: 575.98px) {
+    .panel,
+    .panel ul,
+    .container {
+      padding: 0 !important;
+    }
+    #realisations {
+      min-height: 480px;
+    }
   }
-}
-
 }

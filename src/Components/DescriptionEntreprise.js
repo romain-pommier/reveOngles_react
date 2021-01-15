@@ -52,22 +52,30 @@ class DescriptionEntreprise extends Component {
         <div className="w-100 mb-5 py-5">
           <Row className="justify-content-center">
             <Col className="text-center">
-              <div className="text-center">
-                <Image src={LogoBush} fluid></Image>
-              </div>
-              <h6>Préstations</h6>
+              <a href="#realisations">
+                <div className="text-center">
+                  <Image src={LogoBush} fluid></Image>
+                </div>
+                <h6 style={{ color: 'black' }}>Préstations</h6>
+              </a>
             </Col>
             <Col className="text-center">
-              <div className="text-center">
-                <Image src={LogoStar} fluid></Image>
-              </div>
-              <h6 className="text-center">Tarifs</h6>
+              <a href="#tarifs">
+                <div className="text-center">
+                  <Image src={LogoStar} fluid></Image>
+                </div>
+                <h6 style={{ color: 'black' }} className="text-center">
+                  Tarifs
+                </h6>
+              </a>
             </Col>
             <Col className="text-center">
-              <div className="text-center">
-                <Image src={LogoPhone} fluid></Image>
-              </div>
-              <h6>Contact</h6>
+              <a href="#footer">
+                <div className="text-center">
+                  <Image src={LogoPhone} fluid></Image>
+                </div>
+                <h6 style={{ color: 'black' }}>Contact</h6>
+              </a>
             </Col>
           </Row>
         </div>
