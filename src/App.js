@@ -32,8 +32,6 @@ class App extends Component {
     }
     changeBackgroundHeader() {
         const location = useLocation();
-        console.log(location.pathname);
-        console.log('here');
     }
     render() {
         return (

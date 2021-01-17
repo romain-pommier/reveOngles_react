@@ -1,7 +1,7 @@
-import Auth from "./Authorized"
+import Auth from './Authorized';
 class Query {
     constructor() {
-        this.name = "romain"
+        this.name = 'romain';
     }
 }
 export default Query;
