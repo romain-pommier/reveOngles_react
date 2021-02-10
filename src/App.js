@@ -1,37 +1,37 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import {
     BrowserRouter as Router,
     Switch,
     Route,
     Redirect,
     useLocation,
-} from 'react-router-dom';
-import './App.css';
-import Header from './Components/Header';
-import IntroDiv from './Components/IntroDiv';
-import DescriptionEntreprise from './Components/DescriptionEntreprise';
-import PerfectFlag from './Components/PerfectFlag';
-import Tarifs from './Components/Tarifs';
-import CarouselMain from './Components/CarouselMain';
-import LoginPage from './Components/LoginPage';
-import Formation from './Components/Formation';
-import SocialBar from './Components/SocialBar';
-import Footer from './Components/Footer';
-import './style/style.scss';
-import './style/login.scss';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './style/accordion.scss';
+} from 'react-router-dom'
+import './App.css'
+import Header from './Components/Header'
+import IntroDiv from './Components/IntroDiv'
+import DescriptionEntreprise from './Components/DescriptionEntreprise'
+import PerfectFlag from './Components/PerfectFlag'
+import Tarifs from './Components/Tarifs'
+import CarouselMain from './Components/CarouselMain'
+import LoginPage from './Components/LoginPage'
+import Formation from './Components/Formation'
+import SocialBar from './Components/SocialBar'
+import Footer from './Components/Footer'
+import './style/style.scss'
+import './style/login.scss'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import './style/accordion.scss'
 
 class App extends Component {
     constructor(props) {
-        super(props);
+        super(props)
         this.state = {
             isUserAuthenticated: false,
             token: false,
-        };
+        }
     }
     changeBackgroundHeader() {
-        const location = useLocation();
+        const location = useLocation()
     }
     render() {
         return (
@@ -43,12 +43,12 @@ class App extends Component {
                             exact
                             path="/admin"
                             render={() => {
-                                console.log(this.state.isUserAuthenticated);
+                                console.log(this.state.isUserAuthenticated)
                                 return this.state.isUserAuthenticated ? (
                                     <Redirect to="/" />
                                 ) : (
                                     <LoginPage token={this.token} />
-                                );
+                                )
                             }}
                         ></Route>
 
@@ -62,7 +62,7 @@ class App extends Component {
                             <CarouselMain />
                             <Footer route="/" />
                         </Route>
-                        <Route exact path="/formations">
+                        <Route exact path="/formations" component={Formation}>
                             <SocialBar></SocialBar>
                             <Header route="/formations" />
                             <Formation />
@@ -71,8 +71,8 @@ class App extends Component {
                     </Switch>
                 </Router>
             </>
-        );
+        )
     }
 }
 
-export default App;
+export default App

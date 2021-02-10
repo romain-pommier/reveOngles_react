@@ -1,19 +1,19 @@
-import React, { Component } from 'react';
-import { Image } from 'react-bootstrap';
-import LogoReveongles from '../image/logo_reve_ongles.png';
-import IconFacebook from '../image/facebook_footer.png';
-import IconInstagram from '../image/instagram_footer.png';
-import IconEmail from '../image/email2.png';
-import footerBackground1 from '../image/footer3.jpg';
+import React, { Component } from 'react'
+import { Image } from 'react-bootstrap'
+import LogoReveongles from '../image/logo_reve_ongles.png'
+import IconFacebook from '../image/facebook_footer.png'
+import IconInstagram from '../image/instagram_footer.png'
+import IconEmail from '../image/email2.png'
+import footerBackground1 from '../image/footer3.jpg'
 // import footerBackground2 from '../image/nailFooter.jpg';
-import footerBackground2 from '../image/footer_background_wood.jpg';
+import footerBackground2 from '../image/footer_background_wood.jpg'
 class Footer extends Component {
     constructor(props) {
-        super(props);
+        super(props)
         this.state = {
             backgroundHeader:
                 props.route === '/' ? footerBackground1 : footerBackground2,
-        };
+        }
     }
     render() {
         return (
@@ -32,7 +32,7 @@ class Footer extends Component {
                         src={LogoReveongles}
                         fluid
                     ></Image>
-                    <h4>
+                    {/* <h4>
                         Email:{' '}
                         <a
                             href="mailto:anneesthetique31@gmail.com"
@@ -41,7 +41,7 @@ class Footer extends Component {
                             anneesthetique31@gmail.com
                         </a>
                     </h4>
-                    <h4>80 chemin des agnies 31860 Labarthe sur lèze</h4>
+                    <h4>80 chemin des agnies 31860 Labarthe sur lèze</h4> */}
                 </div>
                 <ul className="link_menu_footer">
                     <li>
@@ -138,7 +138,7 @@ class Footer extends Component {
                     </a>
                 </div>
             </footer>
-        );
+        )
     }
 }
-export default Footer;
+export default Footer
