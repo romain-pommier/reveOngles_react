@@ -1,20 +1,43 @@
-import React, { Component } from 'react';
-import { Image } from 'react-bootstrap';
-import IconFacebook from '../image/facebook_footer.png';
-import IconInstagram from '../image/instagram_footer.png';
+import React, { Component } from 'react'
 
 class SocialBar extends Component {
-  render() {
-    return (
-      <div id="socialBar" className="p-2 ">
-        <a href="https://www.facebook.com/revedonglesanne31">
-          <Image className="icon_footer" src={IconFacebook}></Image>
-        </a>
-        <a href="https://www.instagram.com/revedongles/">
-          <Image className="icon_footer" src={IconInstagram}></Image>
-        </a>
-      </div>
-    );
-  }
+    render() {
+        return (
+            <>
+                <div
+                    style={{ textAlign: 'center' }}
+                    id="socialBar"
+                    className="wrapper "
+                >
+                    <ul>
+                        <li className="facebook">
+                            <a
+                                href="https://www.facebook.com/revedonglesanne31"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <i
+                                    className="fa fa-facebook fa-2x"
+                                    aria-hidden="true"
+                                ></i>
+                            </a>
+                        </li>
+                        <li className="instagram">
+                            <a
+                                href="https://www.instagram.com/revedongles/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <i
+                                    className="fa fa-instagram fa-2x"
+                                    aria-hidden="true"
+                                ></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </>
+        )
+    }
 }
-export default SocialBar;
+export default SocialBar

@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
+import { Link, useHistory, Redirect } from 'react-router-dom'
 import { Image, Navbar, Nav } from 'react-bootstrap'
 import LogoReveongles from '../image/logo_reve_ongles.png'
 import headerBackground1 from '../image/header3.jpg'
 import headerBackground2 from '../image/foto-post-smalti.jpg'
-import { Link, Route } from 'react-router-dom'
 
 class Header extends Component {
     constructor(props) {
@@ -34,8 +34,8 @@ class Header extends Component {
                             </Nav.Link>
                             <Nav.Link href="/#tarifs">Tarifs</Nav.Link>
                             {/* <Route path=""></Route> */}
-                            <Link to="/formations"></Link>
-                            {/* <Nav.Link href="/formations">Formations</Nav.Link> */}
+                            <Nav.Link to="/formations">Formations</Nav.Link>
+                            {/* <Nav.Link href="/formations"></Nav.Link> */}
                             <Nav.Link href="/#realisations">
                                 Réalisations
                             </Nav.Link>

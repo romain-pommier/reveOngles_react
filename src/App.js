@@ -4,7 +4,7 @@ import {
     Switch,
     Route,
     Redirect,
-    useLocation,
+    useHistory,
 } from 'react-router-dom'
 import './App.css'
 import Header from './Components/Header'
@@ -30,9 +30,7 @@ class App extends Component {
             token: false,
         }
     }
-    changeBackgroundHeader() {
-        const location = useLocation()
-    }
+    changeBackgroundHeader() {}
     render() {
         return (
             <>
@@ -51,7 +49,6 @@ class App extends Component {
                                 )
                             }}
                         ></Route>
-
                         <Route exact path="/">
                             <SocialBar></SocialBar>
                             <Header route="/" />
@@ -62,7 +59,7 @@ class App extends Component {
                             <CarouselMain />
                             <Footer route="/" />
                         </Route>
-                        <Route exact path="/formations" component={Formation}>
+                        <Route path="/formations" component={Formation}>
                             <SocialBar></SocialBar>
                             <Header route="/formations" />
                             <Formation />
