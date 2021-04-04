@@ -1,26 +1,26 @@
-import React, { Component } from 'react'
+import React, { Component } from "react"
 import {
     BrowserRouter as Router,
     Switch,
     Route,
     Redirect,
-    useHistory,
-} from 'react-router-dom'
-import './App.css'
-import Header from './Components/Header'
-import IntroDiv from './Components/IntroDiv'
-import DescriptionEntreprise from './Components/DescriptionEntreprise'
-import PerfectFlag from './Components/PerfectFlag'
-import Tarifs from './Components/Tarifs'
-import CarouselMain from './Components/CarouselMain'
-import LoginPage from './Components/LoginPage'
-import Formation from './Components/Formation'
-import SocialBar from './Components/SocialBar'
-import Footer from './Components/Footer'
-import './style/style.scss'
-import './style/login.scss'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import './style/accordion.scss'
+} from "react-router-dom"
+import "./App.css"
+import Header from "./Components/Header"
+import IntroDiv from "./Components/IntroDiv"
+import DescriptionEntreprise from "./Components/DescriptionEntreprise"
+import PerfectFlag from "./Components/PerfectFlag"
+import Tarifs from "./Components/Tarifs"
+import CarouselMain from "./Components/CarouselMain"
+import LoginPage from "./Components/LoginPage"
+import Formation from "./Components/Formation"
+import SocialBar from "./Components/SocialBar"
+import Footer from "./Components/Footer"
+// import Header from "./Components/Header"
+import "./style/style.scss"
+import "./style/login.scss"
+import "bootstrap/dist/css/bootstrap.min.css"
+import "./style/accordion.scss"
 
 class App extends Component {
     constructor(props) {
@@ -35,6 +35,7 @@ class App extends Component {
         return (
             <>
                 <Router>
+                    {/* <Header></Header> */}
                     <Switch>
                         {/* <Route exact path="/admin"></Route> */}
                         <Route
@@ -50,8 +51,8 @@ class App extends Component {
                             }}
                         ></Route>
                         <Route exact path="/">
+                            <Header route="/"></Header>
                             <SocialBar></SocialBar>
-                            <Header route="/" />
                             <IntroDiv />
                             <DescriptionEntreprise />
                             <PerfectFlag />
@@ -60,8 +61,8 @@ class App extends Component {
                             <Footer route="/" />
                         </Route>
                         <Route path="/formations" component={Formation}>
+                            <Header route="/formations"></Header>
                             <SocialBar></SocialBar>
-                            <Header route="/formations" />
                             <Formation />
                             <Footer route="/formations" />
                         </Route>

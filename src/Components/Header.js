@@ -1,16 +1,19 @@
-import React, { Component } from 'react'
-import { Link, useHistory, Redirect } from 'react-router-dom'
-import { Image, Navbar, Nav } from 'react-bootstrap'
-import LogoReveongles from '../image/logo_reve_ongles.png'
-import headerBackground1 from '../image/header3.jpg'
-import headerBackground2 from '../image/foto-post-smalti.jpg'
+import React, { Component } from "react"
+import { Link } from "react-router-dom"
+import { Image, Navbar, Nav } from "react-bootstrap"
+import LogoReveongles from "../image/logo_reve_ongles.png"
+import headerBackground1 from "../image/header3.jpg"
+import headerBackground2 from "../image/foto-post-smalti.jpg"
 
 class Header extends Component {
     constructor(props) {
         super(props)
+        console.log(this.props.route)
         this.state = {
             backgroundHeader:
-                props.route === '/' ? headerBackground1 : headerBackground2,
+                this.props.route === "/"
+                    ? headerBackground1
+                    : headerBackground2,
         }
     }
 
@@ -19,7 +22,7 @@ class Header extends Component {
             <header
                 id="accueil"
                 style={{
-                    backgroundImage: 'url(' + this.state.backgroundHeader + ')',
+                    backgroundImage: "url(" + this.state.backgroundHeader + ")",
                 }}
             >
                 <Navbar bg="transparent " expand="lg">
@@ -29,16 +32,10 @@ class Header extends Component {
                         id="basic-navbar-nav"
                     >
                         <Nav variant="pills">
-                            <Nav.Link href="/#prestations">
-                                Prestations
-                            </Nav.Link>
-                            <Nav.Link href="/#tarifs">Tarifs</Nav.Link>
-                            {/* <Route path=""></Route> */}
-                            <Nav.Link to="/formations">Formations</Nav.Link>
-                            {/* <Nav.Link href="/formations"></Nav.Link> */}
-                            <Nav.Link href="/#realisations">
-                                Réalisations
-                            </Nav.Link>
+                            <Link to={"/#prestations"}>Prestations</Link>
+                            <Link to={"/#tarifs"}>Tarifs</Link>
+                            <Link to={"/formations"}>Formation</Link>
+                            <Link to={"/#realisations"}>Réalisations</Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
