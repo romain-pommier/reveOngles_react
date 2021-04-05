@@ -8,13 +8,22 @@ import headerBackground2 from "../image/foto-post-smalti.jpg"
 class Header extends Component {
     constructor(props) {
         super(props)
-        console.log(this.props.route)
         this.state = {
             backgroundHeader:
                 this.props.route === "/"
                     ? headerBackground1
                     : headerBackground2,
         }
+    }
+    onClickNavLink(targetName) {
+        if (targetName === "formations") {
+            return this.setState({
+                backgroundHeader: headerBackground2,
+            })
+        }
+        this.setState({
+            backgroundHeader: headerBackground1,
+        })
     }
 
     render() {
@@ -25,17 +34,30 @@ class Header extends Component {
                     backgroundImage: "url(" + this.state.backgroundHeader + ")",
                 }}
             >
-                <Navbar bg="transparent " expand="lg">
+                <Navbar bg="transparent" expand="lg">
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse
                         className="justify-content-center"
                         id="basic-navbar-nav"
                     >
-                        <Nav variant="pills">
-                            <Link to={"/#prestations"}>Prestations</Link>
-                            <Link to={"/#tarifs"}>Tarifs</Link>
-                            <Link to={"/formations"}>Formation</Link>
-                            <Link to={"/#realisations"}>Réalisations</Link>
+                        <Nav
+                            variant="pills"
+                            onClick={(e) => {
+                                this.onClickNavLink(e.target.name)
+                            }}
+                        >
+                            <Link name="prestations" to={"/#prestations"}>
+                                Prestations
+                            </Link>
+                            <Link name="tarifs" to={"/#tarifs"}>
+                                Tarifs
+                            </Link>
+                            <Link name="formations" to={"/formations"}>
+                                Formation
+                            </Link>
+                            <Link name="realisations" to={"/#realisations"}>
+                                Réalisations
+                            </Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>

@@ -35,9 +35,7 @@ class App extends Component {
         return (
             <>
                 <Router>
-                    {/* <Header></Header> */}
                     <Switch>
-                        {/* <Route exact path="/admin"></Route> */}
                         <Route
                             exact
                             path="/admin"
@@ -51,8 +49,8 @@ class App extends Component {
                             }}
                         ></Route>
                         <Route exact path="/">
-                            <Header route="/"></Header>
                             <SocialBar></SocialBar>
+                            <Header route="/"></Header>
                             <IntroDiv />
                             <DescriptionEntreprise />
                             <PerfectFlag />
@@ -60,9 +58,9 @@ class App extends Component {
                             <CarouselMain />
                             <Footer route="/" />
                         </Route>
-                        <Route path="/formations" component={Formation}>
-                            <Header route="/formations"></Header>
+                        <Route path="/formations">
                             <SocialBar></SocialBar>
+                            <Header route="/formations"></Header>
                             <Formation />
                             <Footer route="/formations" />
                         </Route>

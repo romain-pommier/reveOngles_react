@@ -160,7 +160,7 @@ footer {
 .icon_footer_group {
     display: flex;
     justify-content: center;
-    padding: 5% 30% 5% 30% !important;
+    padding: 5% 0% 5% 0% !important;
     flex-wrap: wrap;
 }
 
@@ -326,6 +326,18 @@ footer {
 
     :first-child {
         margin-bottom: 5px;
+    }
+
+    ul li {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+    }
+
+    /* Style the icons by setting its color and margin-top value to 20px 
+          to align it properly */
+    ul li .fa {
+        margin-top: 5%;
     }
 }
 
