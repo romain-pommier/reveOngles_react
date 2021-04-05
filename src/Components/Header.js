@@ -46,18 +46,21 @@ class Header extends Component {
                                 this.onClickNavLink(e.target.name)
                             }}
                         >
-                            <Link name="prestations" to={"/#prestations"}>
+                            <Nav.Link name="prestations" href={"/#prestations"}>
                                 Prestations
-                            </Link>
-                            <Link name="tarifs" to={"/#tarifs"}>
+                            </Nav.Link>
+                            <Nav.Link name="tarifs" href={"/#tarifs"}>
                                 Tarifs
-                            </Link>
+                            </Nav.Link>
                             <Link name="formations" to={"/formations"}>
                                 Formation
                             </Link>
-                            <Link name="realisations" to={"/#realisations"}>
+                            <Nav.Link
+                                name="realisations"
+                                href={"/#realisations"}
+                            >
                                 Réalisations
-                            </Link>
+                            </Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
