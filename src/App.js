@@ -16,6 +16,7 @@ import LoginPage from "./Components/LoginPage"
 import Formation from "./Components/Formation"
 import SocialBar from "./Components/SocialBar"
 import Footer from "./Components/Footer"
+import Page404 from "./Components/Page404"
 // import Header from "./Components/Header"
 import "./style/style.scss"
 import "./style/login.scss"
@@ -64,6 +65,7 @@ class App extends Component {
                             <Formation />
                             <Footer route="/formations" />
                         </Route>
+                        <Route component={Page404} />
                     </Switch>
                 </Router>
             </>

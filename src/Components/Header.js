@@ -15,6 +15,7 @@ class Header extends Component {
                     : headerBackground2,
         }
     }
+
     onClickNavLink(targetName) {
         if (targetName === "formations") {
             return this.setState({
