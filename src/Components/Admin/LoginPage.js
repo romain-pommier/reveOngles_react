@@ -1,9 +1,10 @@
 import React, { Component } from "react"
+import { withRouter } from "react-router-dom"
 import Button from "react-bootstrap/Button"
 import Form from "react-bootstrap/Form"
-import LogoReveongles from "../image/logo_reve_ongles.png"
+import LogoReveongles from "../../image/logo_reve_ongles.png"
 import { Image } from "react-bootstrap"
-import Auth from "../Query/Authorized"
+import Auth from "../../Query/Authorized"
 
 class LoginPage extends Component {
     constructor(props) {
@@ -32,9 +33,11 @@ class LoginPage extends Component {
         }
         event.preventDefault()
         new Auth(loginValue).getToken().then((data) => {
+            const { history } = this.props
             this.setState({ token: data })
-            console.log(this)
-            if (this.state.token.error) {
+            console.log(this.state.token)
+            if (!this.state.token.error) {
+                history.push("/toto")
                 return
             }
         })
@@ -73,4 +76,4 @@ class LoginPage extends Component {
         )
     }
 }
-export default LoginPage
+export default withRouter(LoginPage)

@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import ReactDOM from "react-dom"
 import {
     BrowserRouter as Router,
     Switch,
@@ -12,12 +13,12 @@ import DescriptionEntreprise from "./Components/DescriptionEntreprise"
 import PerfectFlag from "./Components/PerfectFlag"
 import Tarifs from "./Components/Tarifs"
 import CarouselMain from "./Components/CarouselMain"
-import LoginPage from "./Components/LoginPage"
+import LoginPage from "./Components/Admin/LoginPage"
 import Formation from "./Components/Formation"
 import SocialBar from "./Components/SocialBar"
 import Footer from "./Components/Footer"
 import Page404 from "./Components/Page404"
-// import Header from "./Components/Header"
+import FormContentAdmin from "./Components/FormContentAdmin"
 import "./style/style.scss"
 import "./style/login.scss"
 import "bootstrap/dist/css/bootstrap.min.css"
@@ -65,6 +66,9 @@ class App extends Component {
                             <Formation />
                             <Footer route="/formations" />
                         </Route>
+                        <Route path="/toto">
+                            <FormContentAdmin />
+                        </Route>
                         <Route component={Page404} />
                     </Switch>
                 </Router>
@@ -72,5 +76,4 @@ class App extends Component {
         )
     }
 }
-
 export default App
