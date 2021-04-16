@@ -32,11 +32,11 @@ class LoginPage extends Component {
         }
         event.preventDefault()
         new Auth(loginValue).login().then((data) => {
-            console.log(data)
             const { history } = this.props
             this.setState({ token: data })
             if (!this.state.token.error) {
-                history.push("/toto")
+                console.log("push here")
+                history.push("/admin")
                 return
             }
             this.setState({ errorLogin: true })

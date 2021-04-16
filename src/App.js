@@ -29,7 +29,7 @@ class App extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            isUserAuthenticated: isAuth(),
+            // isUserAuthenticated: isAuth(),
             token: false,
         }
     }
@@ -39,7 +39,7 @@ class App extends Component {
             <>
                 <Router>
                     <Switch>
-                        <Route exact path="/admin">
+                        <Route exact path="/login">
                             <LoginPage token={this.token} />
                         </Route>
                         <Route exact path="/">
@@ -59,10 +59,9 @@ class App extends Component {
                             <Footer route="/formations" />
                         </Route>
                         <Route
-                            path="/toto"
+                            path="/admin"
                             render={({ location }) => {
-                                console.log(this.state.isUserAuthenticated)
-                                return this.state.isUserAuthenticated ? (
+                                return isAuth() ? (
                                     <>
                                         <SideBar />
                                         <FormContentAdmin />
@@ -70,7 +69,7 @@ class App extends Component {
                                 ) : (
                                     <Redirect
                                         to={{
-                                            pathname: "/admin",
+                                            pathname: "/login",
                                             state: { from: location },
                                         }}
                                     />
