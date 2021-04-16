@@ -1,5 +1,4 @@
 import React, { Component } from "react"
-import ReactDOM from "react-dom"
 import {
     BrowserRouter as Router,
     Switch,
@@ -18,7 +17,9 @@ import Formation from "./Components/Formation"
 import SocialBar from "./Components/SocialBar"
 import Footer from "./Components/Footer"
 import Page404 from "./Components/Page404"
-import FormContentAdmin from "./Components/FormContentAdmin"
+import FormContentAdmin from "./Components/Admin/FormFormation"
+import SideBar from "./Components/Admin/SideBar"
+import { isAuth } from "./utils/isAuth"
 import "./style/style.scss"
 import "./style/login.scss"
 import "bootstrap/dist/css/bootstrap.min.css"
@@ -28,7 +29,7 @@ class App extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            isUserAuthenticated: false,
+            isUserAuthenticated: isAuth(),
             token: false,
         }
     }
@@ -38,18 +39,9 @@ class App extends Component {
             <>
                 <Router>
                     <Switch>
-                        <Route
-                            exact
-                            path="/admin"
-                            render={() => {
-                                console.log(this.state.isUserAuthenticated)
-                                return this.state.isUserAuthenticated ? (
-                                    <Redirect to="/" />
-                                ) : (
-                                    <LoginPage token={this.token} />
-                                )
-                            }}
-                        ></Route>
+                        <Route exact path="/admin">
+                            <LoginPage token={this.token} />
+                        </Route>
                         <Route exact path="/">
                             <SocialBar></SocialBar>
                             <Header route="/"></Header>
@@ -66,9 +58,25 @@ class App extends Component {
                             <Formation />
                             <Footer route="/formations" />
                         </Route>
-                        <Route path="/toto">
-                            <FormContentAdmin />
-                        </Route>
+                        <Route
+                            path="/toto"
+                            render={({ location }) => {
+                                console.log(this.state.isUserAuthenticated)
+                                return this.state.isUserAuthenticated ? (
+                                    <>
+                                        <SideBar />
+                                        <FormContentAdmin />
+                                    </>
+                                ) : (
+                                    <Redirect
+                                        to={{
+                                            pathname: "/admin",
+                                            state: { from: location },
+                                        }}
+                                    />
+                                )
+                            }}
+                        />
                         <Route component={Page404} />
                     </Switch>
                 </Router>

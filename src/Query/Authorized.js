@@ -19,10 +19,21 @@ class Authorized extends Component {
             }),
         }
     }
-    getToken() {
+    login() {
         return new Promise((resolve, reject) => {
             fetch(AUTHORIZEDURL, this.objectRequest).then((response) => {
                 response.json().then((data) => {
+                    if (!data.error) {
+                        localStorage.setItem(
+                            "user",
+                            JSON.stringify({
+                                ...data,
+                                expire_date:
+                                    new Date().getTime() +
+                                    data.expires_in * 1000,
+                            })
+                        )
+                    }
                     resolve(data)
                 })
             })
