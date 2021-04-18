@@ -53,7 +53,11 @@ class Header extends Component {
                             <Nav.Link name="tarifs" href={"/#tarifs"}>
                                 Tarifs
                             </Nav.Link>
-                            <Link name="formations" to={"/formations"}>
+                            <Link
+                                className="nav-link"
+                                name="formations"
+                                to={"/formations"}
+                            >
                                 Formation
                             </Link>
                             <Nav.Link

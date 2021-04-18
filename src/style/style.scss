@@ -30,12 +30,15 @@ header {
         font-family: "Lato Italic";
         font-size: 30px;
         .navbar-nav a {
-            padding: 0 50px !important;
-            color: black !important;
+            margin: 0 50px !important;
+            color: rgba(0, 0, 0, 0.8) !important;
         }
     }
     .nav-link:hover {
-        filter: invert(1);
+        color: black !important;
+        border-bottom: black 1px solid;
+        border-radius: 0;
+        // border-width: 5px;
     }
     .nav-pills .active {
         border-bottom: 1.5px black solid;
@@ -52,11 +55,20 @@ header {
 
 /*Div intro*/
 .div_intro {
+    min-height: 480px;
+    .intro-content {
+        padding: 0 85px !important;
+    }
+    .picture-intro {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
     font-family: "Lato Regular";
     h3 {
         text-align: center;
         font-family: "Quicksand_Light";
-        font-size: 45px;
+        // font-size: 45px;
         padding: 1em 0 5px 0;
         margin: 0 35px;
         border-bottom: black solid 1px;
@@ -72,6 +84,11 @@ header {
         .bold {
             font-weight: bold;
         }
+    }
+    .intro-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 
