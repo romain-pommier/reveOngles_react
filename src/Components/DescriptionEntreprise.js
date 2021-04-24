@@ -1,14 +1,10 @@
-import React, { Component } from 'react'
-import { Image, Row, Col } from 'react-bootstrap'
-// import NailPolish from "../image/nail-polish.png"
-import NailPolish from '../image/nail-polish3.png'
-import LogoReveongles from '../image/logo_reve_ongles.png'
-// import LogoBush from "../image/bush_icon.png"
-// import LogoStar from "../image/star_icon4.png"
-// import LogoPhone from "../image/phone_icon.png"
-import LogoBush from '../image/bush_icon3.png'
-import LogoStar from '../image/star_icon3.png'
-import LogoPhone from '../image/phone_icon3.png'
+import React, { Component } from "react"
+import { Image, Row, Col } from "react-bootstrap"
+import NailPolish from "../image/nail-polish3.png"
+import LogoReveongles from "../image/logo_reve_ongles.png"
+import LogoBush from "../image/bush_icon3.png"
+import LogoStar from "../image/star_icon3.png"
+import LogoPhone from "../image/phone_icon3.png"
 
 class DescriptionEntreprise extends Component {
     render() {
@@ -64,7 +60,7 @@ class DescriptionEntreprise extends Component {
                                 <div className="text-center">
                                     <Image src={LogoBush} fluid></Image>
                                 </div>
-                                <h6 style={{ color: 'black' }}>Préstations</h6>
+                                <h6 style={{ color: "black" }}>Préstations</h6>
                             </a>
                         </Col>
                         <Col className="text-center">
@@ -73,7 +69,7 @@ class DescriptionEntreprise extends Component {
                                     <Image src={LogoStar} fluid></Image>
                                 </div>
                                 <h6
-                                    style={{ color: 'black' }}
+                                    style={{ color: "black" }}
                                     className="text-center"
                                 >
                                     Tarifs
@@ -85,7 +81,7 @@ class DescriptionEntreprise extends Component {
                                 <div className="text-center">
                                     <Image src={LogoPhone} fluid></Image>
                                 </div>
-                                <h6 style={{ color: 'black' }}>Contact</h6>
+                                <h6 style={{ color: "black" }}>Contact</h6>
                             </a>
                         </Col>
                     </Row>

@@ -1,0 +1,24 @@
+.sideBar {
+    a {
+        color: rgba(0, 0, 0, 0.87) !important;
+        text-decoration: none;
+    }
+
+    a :hover {
+        text-decoration: none;
+    }
+}
+.powerButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    svg {
+        height: 38px !important;
+        width: 38px !important;
+    }
+
+    :hover {
+        color: #9e1638;
+        cursor: pointer;
+    }
+}

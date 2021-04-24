@@ -7,8 +7,8 @@ class Page404 extends Component {
         return (
             <div style={{ paddingTop: "10%", style_404 }}>
                 <h1> Page not found</h1>
-                <p class="zoom-area">Ooops Erreur 404</p>
-                <section class="error-container">
+                <p className="zoom-area">Ooops Erreur 404</p>
+                <section className="error-container">
                     <span>
                         <span>4</span>
                     </span>
@@ -17,7 +17,7 @@ class Page404 extends Component {
                         <span>4</span>
                     </span>
                 </section>
-                <div class="link-container">
+                <div className="link-container">
                     <Button variant="outline-dark" href="/">
                         Back
                     </Button>

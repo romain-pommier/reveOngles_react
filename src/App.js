@@ -1,10 +1,5 @@
 import React, { Component } from "react"
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Redirect,
-} from "react-router-dom"
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import "./App.css"
 import Header from "./Components/Header"
 import IntroDiv from "./Components/IntroDiv"
@@ -17,13 +12,12 @@ import Formation from "./Components/Formation"
 import SocialBar from "./Components/SocialBar"
 import Footer from "./Components/Footer"
 import Page404 from "./Components/Page404"
-import FormContentAdmin from "./Components/Admin/FormFormation"
-import SideBar from "./Components/Admin/SideBar"
-import { isAuth } from "./utils/isAuth"
+import MainAdmin from "./Layout/MainAdmin"
 import "./style/style.scss"
 import "./style/login.scss"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./style/accordion.scss"
+import "./style/admin.scss"
 
 class App extends Component {
     constructor(props) {
@@ -52,30 +46,23 @@ class App extends Component {
                             <CarouselMain />
                             <Footer route="/" />
                         </Route>
-                        <Route path="/formations">
+                        <Route path="/formations" exact>
                             <SocialBar></SocialBar>
                             <Header route="/formations"></Header>
                             <Formation />
                             <Footer route="/formations" />
                         </Route>
-                        <Route
-                            path="/admin"
-                            render={({ location }) => {
-                                return isAuth() ? (
-                                    <>
-                                        <SideBar />
-                                        <FormContentAdmin />
-                                    </>
-                                ) : (
-                                    <Redirect
-                                        to={{
-                                            pathname: "/login",
-                                            state: { from: location },
-                                        }}
-                                    />
-                                )
-                            }}
-                        />
+
+                        <MainAdmin>
+                            <Route path="/admin/services" exact>
+                                <h1>admin services</h1>
+                            </Route>
+                            <Route path="/admin/formations" exact>
+                                <h1>admin formations</h1>
+                            </Route>
+                            <Route component={Page404} />
+                        </MainAdmin>
+
                         <Route component={Page404} />
                     </Switch>
                 </Router>

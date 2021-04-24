@@ -36,7 +36,7 @@ class LoginPage extends Component {
             this.setState({ token: data })
             if (!this.state.token.error) {
                 console.log("push here")
-                history.push("/admin")
+                history.push("/admin/services")
                 return
             }
             this.setState({ errorLogin: true })
@@ -55,11 +55,7 @@ class LoginPage extends Component {
                 }}
             >
                 <Form onSubmit={this.handleSubmit}>
-                    <Image
-                        className="logo_admin"
-                        src={LogoReveongles}
-                        fluid
-                    ></Image>
+                    <Image className="logo_admin" src={LogoReveongles} fluid />
                     <Form.Group controlId="email">
                         <Form.Control
                             autoFocus
