@@ -55,12 +55,15 @@ class App extends Component {
                         </Route>
 
                         <MainAdmin>
-                            <Route path="/admin/services" exact>
-                                <h1>admin services</h1>
-                            </Route>
-                            <Route path="/admin/formations" exact>
-                                <FormFormation />
-                            </Route>
+                            <Switch>
+                                <Route path="/admin/services" exact>
+                                    <h1>admin services</h1>
+                                </Route>
+                                <Route path="/admin/formations" exact>
+                                    <FormFormation />
+                                </Route>
+                                <Route component={Page404} />
+                            </Switch>
                         </MainAdmin>
 
                         <Route component={Page404} />

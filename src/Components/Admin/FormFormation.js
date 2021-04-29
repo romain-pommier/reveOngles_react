@@ -1,4 +1,4 @@
-import React, { useState, Component } from "react"
+import React, { Component } from "react"
 import Editor, { createEditorStateWithText } from "@draft-js-plugins/editor"
 import { Button } from "react-bootstrap"
 import { convertToHTML, convertFromHTML } from "draft-convert"
@@ -9,14 +9,14 @@ import {
     ItalicButton,
     BoldButton,
     UnderlineButton,
-    CodeButton,
+    // CodeButton,
     HeadlineOneButton,
     HeadlineTwoButton,
     HeadlineThreeButton,
     UnorderedListButton,
     OrderedListButton,
-    BlockquoteButton,
-    CodeBlockButton,
+    // BlockquoteButton,
+    // CodeBlockButton,
 } from "@draft-js-plugins/buttons"
 import "@draft-js-plugins/static-toolbar/lib/plugin.css"
 import "../../style/editorStyles.scss"
