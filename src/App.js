@@ -10,6 +10,7 @@ import CarouselMain from "./Components/CarouselMain"
 import LoginPage from "./Components/Admin/LoginPage"
 import Formation from "./Components/Formation"
 import SocialBar from "./Components/SocialBar"
+import FormFormation from "./Components/Admin/FormFormation"
 import Footer from "./Components/Footer"
 import Page404 from "./Components/Page404"
 import MainAdmin from "./Layout/MainAdmin"
@@ -58,9 +59,8 @@ class App extends Component {
                                 <h1>admin services</h1>
                             </Route>
                             <Route path="/admin/formations" exact>
-                                <h1>admin formations</h1>
+                                <FormFormation />
                             </Route>
-                            <Route component={Page404} />
                         </MainAdmin>
 
                         <Route component={Page404} />

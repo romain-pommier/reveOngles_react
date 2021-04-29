@@ -1,5 +1,6 @@
 import { isAuth } from "../utils/isAuth"
 import React from "react"
+import ReactDOM from "react-dom"
 import SideBar from "../Components/Admin/SideBar"
 import Disconnect from "../Components/Admin/Disconnect"
 
@@ -9,9 +10,11 @@ export default function MainAdmin({ children }) {
     }
     return (
         <React.Fragment>
-            <SideBar />
-            {children}
-            <Disconnect />
+            <div style={{ display: "flex" }}>
+                <SideBar />
+                {children}
+                <Disconnect />
+            </div>
         </React.Fragment>
     )
 }
