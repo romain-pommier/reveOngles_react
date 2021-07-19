@@ -33,7 +33,7 @@ class Tarifs extends Component {
                 <h3 className="m-5 text-center">Tarifs bar a ongles</h3>
                 <Accordion data={this.data}></Accordion>
                 <p className="text-center mt-5">
-                    Uniquement sur RDV du Lundi au Vendredi
+                    Uniquement sur RDV du Lundi au Vendredi de 09h à 19h
                 </p>
             </div>
         )

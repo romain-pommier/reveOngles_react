@@ -27,7 +27,8 @@ class Footer extends Component {
                     <div>
                         <h5>
                             Par Téléphone 07.66.30.46.52 <br />
-                            Uniquement sur RDV du Lundi au Vendredi
+                            Horaires d`ouverture: Sur RDV Du Lundi au Vendredi:
+                            09h à 19h
                         </h5>
                         <h5 className="mt-5">
                             80 chemin des Agries 31860 Labarthe sur lèze
