@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import { Image, Row, Col } from "react-bootstrap"
 import NailPolish from "../image/nail-polish3.png"
-import LogoReveongles from "../image/logo_reve_ongles.png"
+import LogoReveongles from "../image/rsz_logo_reve_ongles.png"
 import LogoBush from "../image/bush_icon3.png"
 import LogoStar from "../image/star_icon3.png"
 import LogoPhone from "../image/phone_icon3.png"

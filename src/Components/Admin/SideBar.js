@@ -14,7 +14,7 @@ import ListItemIcon from "@material-ui/core/ListItemIcon"
 import ListItemText from "@material-ui/core/ListItemText"
 import LogoBush from "../../image/bush_icon3.png"
 import LogoStar from "../../image/star_icon3.png"
-import LogoReveongles from "../../image/logo_reve_ongles.png"
+import LogoReveongles from "../../image/rsz_logo_reve_ongles.png"
 import { Link } from "react-router-dom"
 
 const drawerWidth = 240

@@ -1,8 +1,9 @@
 import React, { Component } from "react"
 import { Link } from "react-router-dom"
 import { Image, Navbar, Nav } from "react-bootstrap"
-import LogoReveongles from "../image/logo_reve_ongles.png"
-import headerBackground1 from "../image/header3.jpg"
+import LogoReveongles from "../image/rsz_logo_reve_ongles.png"
+// import headerBackground1 from "../image/header3.jpg"
+import headerBackground1 from "../image/rsz_header3.jpg"
 import headerBackground2 from "../image/foto-post-smalti.jpg"
 
 class Header extends Component {
@@ -30,6 +31,7 @@ class Header extends Component {
     render() {
         return (
             <header
+                rel="preload"
                 id="accueil"
                 style={{
                     backgroundImage: "url(" + this.state.backgroundHeader + ")",
@@ -71,6 +73,7 @@ class Header extends Component {
                 </Navbar>
                 <Image
                     className="logo_header"
+                    rel="preload"
                     src={LogoReveongles}
                     fluid
                 ></Image>

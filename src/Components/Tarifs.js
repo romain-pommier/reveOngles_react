@@ -1,30 +1,30 @@
-import React, { Component } from 'react'
-import Accordion from './Accordion'
-import ServiceMain from '../Contents/ServiceMain'
-import ServicePied from '../Contents/ServicePied'
-import ServiceBeaute from '../Contents/ServiceBeaute'
+import React, { Component } from "react"
+import Accordion from "./Accordion"
+import ServiceMain from "../Contents/ServiceMain"
+import ServicePied from "../Contents/ServicePied"
+import ServiceBeaute from "../Contents/ServiceBeaute"
 // import ServiceFormation from '../Contents/ServiceFormation';
 
 class Tarifs extends Component {
     data = [
         {
             id: 1,
-            name: 'Tarifs Mains',
+            name: "Tarifs Mains",
             content: () => <ServiceMain />,
-            state: 'inactive',
+            state: "inactive",
         },
         {
             id: 2,
-            name: 'Tarifs Pieds',
+            name: "Tarifs Pieds",
             content: () => <ServicePied />,
-            state: 'inactive',
+            state: "inactive",
         },
-        {
-            id: 3,
-            name: 'Beauté Mains & Pieds',
-            content: () => <ServiceBeaute />,
-            state: 'inactive',
-        },
+        // {
+        //     id: 3,
+        //     name: 'Beauté Mains & Pieds',
+        //     content: () => <ServiceBeaute />,
+        //     state: 'inactive',
+        // },
         // { id: 4, name: "Formations", content: () => <ServiceFormation />, state: 'inactive' }
     ]
     render() {
@@ -32,6 +32,9 @@ class Tarifs extends Component {
             <div id="tarifs" className="accordion_div">
                 <h3 className="m-5 text-center">Tarifs bar a ongles</h3>
                 <Accordion data={this.data}></Accordion>
+                <p className="text-center mt-5">
+                    Uniquement sur RDV du Lundi au Vendredi
+                </p>
             </div>
         )
     }

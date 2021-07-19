@@ -1,12 +1,12 @@
-import React, { Component } from 'react'
-import { Row, Col } from 'react-bootstrap'
+import React, { Component } from "react"
+import { Row, Col } from "react-bootstrap"
 class ServiceBeaute extends Component {
     data = [
-        { id: 1, serviceName: 'Manucure combiné russe seul', price: '25 €' },
-        { id: 2, serviceName: 'Avec Pose', price: '15 €' },
-        { id: 3, serviceName: 'Manucure rapide', price: '10 €' },
-        { id: 4, serviceName: 'Soin à la paraffine', price: '20 €' },
-        { id: 4, serviceName: 'Forfait mains et pieds', price: '-10 %' },
+        // { id: 1, serviceName: 'Manucure combiné russe seul', price: '25 €' },
+        // { id: 2, serviceName: 'Avec Pose', price: '15 €' },
+        // { id: 3, serviceName: 'Manucure rapide', price: '10 €' },
+        // { id: 4, serviceName: 'Soin à la paraffine', price: '20 €' },
+        // { id: 4, serviceName: 'Forfait mains et pieds', price: '-10 %' },
     ]
     render() {
         return (

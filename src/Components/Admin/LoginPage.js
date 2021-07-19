@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import { withRouter } from "react-router-dom"
 import { Button, Form, Image, Toast } from "react-bootstrap"
-import LogoReveongles from "../../image/logo_reve_ongles.png"
+import LogoReveongles from "../../image/rsz_logo_reve_ongles.png"
 import Auth from "../../Query/Authorized"
 
 class LoginPage extends Component {
