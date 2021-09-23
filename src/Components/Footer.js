@@ -23,7 +23,12 @@ class Footer extends Component {
                     className="first_div_footer mb-5"
                     style={{ color: "black" }}
                 >
-                    <Image className="logo_footer" src={LogoReveongles} fluid />
+                    <Image
+                        className="logo_footer"
+                        src={LogoReveongles}
+                        fluid
+                        alt="logo rêve d'ongles"
+                    />
                     <div>
                         <h5>
                             Par Téléphone 07.66.30.46.52 <br />

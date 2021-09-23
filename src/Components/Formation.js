@@ -23,42 +23,42 @@ class Formation extends Component {
             content: () => <FormationGel />,
             state: "inactive",
         },
-        {
-            id: 3,
-            name: "French reverse",
-            content: () => <FormationFrench />,
-            state: "inactive",
-        },
-        {
-            id: 4,
-            name: "Manucure russe et vernis permanent renfort",
-            content: () => <FormationManucure />,
-            state: "inactive",
-        },
-        {
-            id: 5,
-            name: "Pose salon rapide ",
-            content: () => <FormationRapide />,
-            state: "inactive",
-        },
-        {
-            id: 6,
-            name: "Babyboomer et dégradé",
-            content: () => <FormationBaby />,
-            state: "inactive",
-        },
-        {
-            id: 7,
-            name: "Coaching Privé",
-            content: () => <FormationCoaching />,
-            state: "inactive",
-        },
-        {
-            id: 8,
-            name: "Mini formes",
-            content: () => <FormationMini />,
-            state: "inactive",
-        },
+        // {
+        //     id: 3,
+        //     name: "French reverse",
+        //     content: () => <FormationFrench />,
+        //     state: "inactive",
+        // },
+        // {
+        //     id: 4,
+        //     name: "Manucure russe et vernis permanent renfort",
+        //     content: () => <FormationManucure />,
+        //     state: "inactive",
+        // },
+        // {
+        //     id: 5,
+        //     name: "Pose salon rapide ",
+        //     content: () => <FormationRapide />,
+        //     state: "inactive",
+        // },
+        // {
+        //     id: 6,
+        //     name: "Babyboomer et dégradé",
+        //     content: () => <FormationBaby />,
+        //     state: "inactive",
+        // },
+        // {
+        //     id: 7,
+        //     name: "Coaching Privé",
+        //     content: () => <FormationCoaching />,
+        //     state: "inactive",
+        // },
+        // {
+        //     id: 8,
+        //     name: "Mini formes",
+        //     content: () => <FormationMini />,
+        //     state: "inactive",
+        // },
     ]
     render() {
         return (

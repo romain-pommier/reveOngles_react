@@ -15,13 +15,15 @@ class DescriptionEntreprise extends Component {
                         <div className=" d-flex justify-content-center">
                             <Image
                                 className="nail_polish"
+                                alt="nailpolish logo"
                                 src={NailPolish}
                                 fluid
                             ></Image>
                         </div>
                         <div className=" pt-5 d-flex justify-content-center">
                             <Image
-                                className=" description_logo"
+                                className="description_logo"
+                                alt="logo rêve d'ongles"
                                 src={LogoReveongles}
                                 fluid
                             ></Image>
@@ -58,7 +60,11 @@ class DescriptionEntreprise extends Component {
                         <Col className="text-center">
                             <a href="#realisations">
                                 <div className="text-center">
-                                    <Image src={LogoBush} fluid></Image>
+                                    <Image
+                                        src={LogoBush}
+                                        fluid
+                                        alt="logo bush"
+                                    ></Image>
                                 </div>
                                 <h6 style={{ color: "black" }}>Préstations</h6>
                             </a>
@@ -66,7 +72,11 @@ class DescriptionEntreprise extends Component {
                         <Col className="text-center">
                             <a href="#tarifs">
                                 <div className="text-center">
-                                    <Image src={LogoStar} fluid></Image>
+                                    <Image
+                                        src={LogoStar}
+                                        fluid
+                                        alt="logo star"
+                                    ></Image>
                                 </div>
                                 <h6
                                     style={{ color: "black" }}
@@ -79,7 +89,11 @@ class DescriptionEntreprise extends Component {
                         <Col className="text-center">
                             <a href="#footer">
                                 <div className="text-center">
-                                    <Image src={LogoPhone} fluid></Image>
+                                    <Image
+                                        src={LogoPhone}
+                                        fluid
+                                        alt="logo phone"
+                                    ></Image>
                                 </div>
                                 <h6 style={{ color: "black" }}>Contact</h6>
                             </a>

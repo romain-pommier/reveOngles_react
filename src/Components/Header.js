@@ -75,6 +75,7 @@ class Header extends Component {
                     className="logo_header"
                     rel="preload"
                     src={LogoReveongles}
+                    alt="logo rêve d'ongles"
                     fluid
                 ></Image>
             </header>
