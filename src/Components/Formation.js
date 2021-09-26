@@ -1,6 +1,8 @@
 import React, { Component } from "react"
 import Accordion from "./Accordion"
 import FormationIntensive from "../Contents/FormationIntensive"
+import MalLogo from "../image/mal_logo.png"
+import MentalLogo from "../image/mental_logo.png"
 import FormationGel from "../Contents/FormationGel"
 import FormationFrench from "../Contents/FormationFrench"
 import FormationManucure from "../Contents/FormationManucure"
@@ -17,12 +19,12 @@ class Formation extends Component {
             content: () => <FormationIntensive />,
             state: "inactive",
         },
-        {
-            id: 2,
-            name: "Perfectionnement gel",
-            content: () => <FormationGel />,
-            state: "inactive",
-        },
+        // {
+        //     id: 2,
+        //     name: "Perfectionnement gel",
+        //     content: () => <FormationGel />,
+        //     state: "inactive",
+        // },
         // {
         //     id: 3,
         //     name: "French reverse",
@@ -91,6 +93,16 @@ class Formation extends Component {
                     envie d'apprendre et d'évoluer et vous ?
                 </p>
                 <Accordion data={this.data}></Accordion>
+                <div
+                    style={{
+                        display: "flex",
+                        justifyContent: "space-evenly",
+                        marginTop: "5%",
+                    }}
+                >
+                    <img src={MalLogo} height="100" width="100" />
+                    <img src={MentalLogo} height="100" width="100" />
+                </div>
                 <p className="text-center mt-5">
                     Demande de renseignements, dates et inscriptions sur ma page{" "}
                     <a

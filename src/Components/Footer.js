@@ -101,6 +101,9 @@ class Footer extends Component {
                 </div>
 
                 <div className="p-2" style={{ color: "black" }}>
+                    <p style={{ fontWeight: "bold" }}>
+                        Mis à jour le 26 septembre 2021.{" "}
+                    </p>
                     <h6>© 2020 Rêve d'ongles Anne POMMIER.</h6>
                     <a className="top_arrow" href="#accueil">
                         <i className="fa fa-angle-up"></i>
