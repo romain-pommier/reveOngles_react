@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import Accordion from "./Accordion"
 import FormationIntensive from "../Contents/FormationIntensive"
 import MalLogo from "../image/mal_logo.png"
+import SatisfactionLogo from "../image/satisfaction.png"
 import MentalLogo from "../image/mental_logo.png"
 import FormationGel from "../Contents/FormationGel"
 import FormationFrench from "../Contents/FormationFrench"
@@ -120,6 +121,9 @@ class Formation extends Component {
                         Mail: revedonglesformation@gmail.com
                     </a>
                 </p>
+                <div style={{ display: "flex", justifyContent: "center" }}>
+                    <img src={SatisfactionLogo} alt="Satisfaction Logo" />
+                </div>
             </div>
         )
     }
