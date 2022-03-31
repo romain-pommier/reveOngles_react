@@ -28,6 +28,9 @@ class DescriptionEntreprise extends Component {
                                 fluid
                             ></Image>
                         </div>
+                        <h2 className="description_header">
+                            Qui sommes nous ?
+                        </h2>
                         <p className="pt-5 text-center description_text">
                             Rêve d’ongles De formation esthéticienne et fascinée
                             par les Ongles à l’âge de 20 ans je décide de me
@@ -40,6 +43,8 @@ class DescriptionEntreprise extends Component {
                             suvit des formations auprès des plus grands artistes
                             formateurs français et internationaux, travail et
                             encore le travail…Toujours en quête de perfection.
+                            <br />
+                            <br />
                             Après douze ans d’expériences, j’ai décidé de créer
                             mon propre centre de formation et obtenue la charte
                             qualité Qualiopi de France, en mon nom, avec mes
