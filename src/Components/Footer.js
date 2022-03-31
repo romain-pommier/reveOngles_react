@@ -44,7 +44,7 @@ class Footer extends Component {
                             <a
                                 className="mt-5"
                                 style={{ color: "#212529" }}
-                                href="https://www.facebook.com/revedonglesanne31"
+                                href="https://www.facebook.com/revedongles31/"
                             >
                                 Facebook: revedonglesanne31
                             </a>{" "}
@@ -75,7 +75,7 @@ class Footer extends Component {
                     <ul>
                         <li className="facebook">
                             <a
-                                href="https://www.facebook.com/revedonglesanne31"
+                                href="https://www.facebook.com/revedongles31/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >

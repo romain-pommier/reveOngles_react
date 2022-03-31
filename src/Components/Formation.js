@@ -11,7 +11,6 @@ import FormationRapide from "../Contents/FormationRapide"
 import FormationBaby from "../Contents/FormationBaby"
 import FormationCoaching from "../Contents/FormationCoaching"
 import FormationMini from "../Contents/FormationMini"
-
 class Formation extends Component {
     data = [
         {
@@ -67,7 +66,7 @@ class Formation extends Component {
         return (
             <div id="tarifs" className="accordion_div">
                 <h2 className="m-5 text-center">Formations</h2>
-                <p style={{ paddingRight: "20%", paddingLeft: "20%" }}>
+                {/* <p style={{ paddingRight: "20%", paddingLeft: "20%" }}>
                     Rêve d’ongles est un centre de formation dédié à
                     l'enseignement des techniques de pose d'ongle. Formatrice
                     depuis plus de 4 ans et prise de passion pour les ongles,
@@ -92,7 +91,7 @@ class Formation extends Component {
                     Apprenez un nouveau métier et devenez Styliste/Prothésiste
                     ongulaire ou Perfectionnez-vous ! L'envie de toujours avoir
                     envie d'apprendre et d'évoluer et vous ?
-                </p>
+                </p> */}
                 <Accordion data={this.data}></Accordion>
                 <div
                     style={{
@@ -108,7 +107,7 @@ class Formation extends Component {
                     Demande de renseignements, dates et inscriptions sur ma page{" "}
                     <a
                         style={{ color: "#212529" }}
-                        href="https://www.facebook.com/revedonglesanne31"
+                        href="https://www.facebook.com/revedongles31/"
                     >
                         Facebook: revedonglesanne31
                     </a>{" "}

@@ -28,7 +28,30 @@ class DescriptionEntreprise extends Component {
                                 fluid
                             ></Image>
                         </div>
-                        <h2 className="description_header">
+                        <p className="pt-5 text-center description_text">
+                            Rêve d’ongles De formation esthéticienne et fascinée
+                            par les Ongles à l’âge de 20 ans je décide de me
+                            lancer à mon compte dans les ongles, en cumulant
+                            deux emplois pour commencer à faire ma clientèle et
+                            tout en ayant un salaire fixe. Je ne compte pas les
+                            heures passées, m’entraînant sans relâche pour
+                            apporter à mes clientes les meilleures des
+                            prestations, j’ai participé à de nombreux stages et
+                            suvit des formations auprès des plus grands artistes
+                            formateurs français et internationaux, travail et
+                            encore le travail…Toujours en quête de perfection.
+                            Après douze ans d’expériences, j’ai décidé de créer
+                            mon propre centre de formation et obtenue la charte
+                            qualité Qualiopi de France, en mon nom, avec mes
+                            propres programmes de formation. Je teste et je
+                            sélectionne le meilleur de chacune, pour apporter à
+                            mes clientes et mes élèves, des formations
+                            professionnelles qualifiantes, complètes pour leur
+                            permettre d’atteindre l’excellence « Laissez votre
+                            passion vous mener à votre profession » Au plaisir
+                            de vous rencontrer un jour, lors d’une formation
+                        </p>
+                        {/* <h2 className="description_header">
                             Salon de manucure et centre de formation
                         </h2>
                         <p className="pt-5 text-center description_text">
@@ -52,7 +75,7 @@ class DescriptionEntreprise extends Component {
                             (extension en gel, remplissage vernis
                             semi-permanent, nail art, pose artistique) sur
                             rendez-vous.
-                        </p>
+                        </p> */}
                     </Col>
                 </div>
                 <div className="w-100 mb-5 py-5">

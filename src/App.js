@@ -40,7 +40,7 @@ class App extends Component {
                         <Route exact path="/">
                             <SocialBar></SocialBar>
                             <Header route="/"></Header>
-                            <IntroDiv />
+                            {/* <IntroDiv /> */}
                             <DescriptionEntreprise />
                             <PerfectFlag />
                             <Tarifs />

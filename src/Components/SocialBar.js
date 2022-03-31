@@ -1,18 +1,18 @@
-import React, { Component } from 'react'
+import React, { Component } from "react"
 
 class SocialBar extends Component {
     render() {
         return (
             <>
                 <div
-                    style={{ textAlign: 'center' }}
+                    style={{ textAlign: "center" }}
                     id="socialBar"
                     className="wrapper "
                 >
                     <ul>
                         <li className="facebook">
                             <a
-                                href="https://www.facebook.com/revedonglesanne31"
+                                href="https://www.facebook.com/revedongles31/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
